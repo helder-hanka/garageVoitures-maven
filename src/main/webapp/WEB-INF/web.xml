@@ -3,15 +3,42 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>AjoutVoitures</servlet-name>
-  	<display-name>AjoutVoitures</display-name>
-  	<description>Bien venue dans le garage</description>
-  	<servlet-class>controller.AjoutVoitures</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>AjoutVoitures</servlet-name>
-  	<url-pattern>/ajoutVoitures</url-pattern>
-  </servlet-mapping>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>AjoutVoitures</servlet-name>
+		<display-name>AjoutVoitures</display-name>
+		<servlet-class>controller.AjoutVoitures</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Liste</servlet-name>
+		<display-name>Liste</display-name>
+		<description></description>
+		<servlet-class>controller.Listes</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ModifierVoiture</servlet-name>
+		<display-name>ModifierVoiture</display-name>
+		<servlet-class>controller.ModifierVoiture</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConfirmerSuppression</servlet-name>
+		<display-name>ConfirmerSuppression</display-name>
+		<servlet-class>controller.ConfirmerSuppression</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AjoutVoitures</servlet-name>
+		<url-pattern>/ajoutVoitures</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Liste</servlet-name>
+		<url-pattern>/liste</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ModifierVoiture</servlet-name>
+		<url-pattern>/modifier</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConfirmerSuppression</servlet-name>
+		<url-pattern>/supprimer</url-pattern>
+	</servlet-mapping>
 </web-app>
