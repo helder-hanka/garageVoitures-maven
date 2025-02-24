@@ -1,1 +1,8 @@
 /Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/controller/AjoutVoitures.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/controller/ConfirmerSuppression.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/controller/Listes.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/controller/ModifierVoiture.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/dao/VoitureDAO.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/dao/VoitureDAOImpl.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/model/Voiture.java
+/Users/helderfernandes/eclipse-workspace EE/GarageVoitures/src/main/java/utils/DBDConnection.java

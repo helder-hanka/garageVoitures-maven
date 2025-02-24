@@ -36,20 +36,29 @@ public class VoitureDAOImpl implements VoitureDAO {
 	}
 
 	@Override
-	public void modifier(Voiture voiture) throws SQLException {
-		try (Connection conn = DBDConnection.getConnection()) {
-			PreparedStatement ps = conn.prepareStatement(UPDATE_SQL);
+	public String modifier(Voiture voiture) {
+		try (Connection conn = DBDConnection.getConnection();
+				PreparedStatement ps = conn.prepareStatement(UPDATE_SQL)) {
 			ps.setString(1, voiture.getMarque().trim());
 			ps.setString(2, voiture.getModele().trim());
 			ps.setString(3, voiture.getEtat().trim());
 			ps.setString(4, voiture.getImmatriculation().trim().toUpperCase());
-			ps.executeUpdate();
+
+			int rowsAffected = ps.executeUpdate();
+			if (rowsAffected > 0) {
+				return "Modification réussie.";
+			} else {
+				return "Erreur : Aucun enregistrement trouvé pour cette immatriculation.";
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return "Erreur lors de la modification de la voiture.";
 		}
 
 	}
 
 	@Override
-	public Voiture trouverParId(String immatriculation) throws SQLException {
+	public Voiture trouverParImmat(String immatriculation) throws SQLException {
 
 		try (Connection conn = DBDConnection.getConnection();
 				PreparedStatement ps = conn.prepareStatement(SELECT_SQL)) {
